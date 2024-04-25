@@ -28,7 +28,7 @@ pipeline:
                             connectorRef: account.Github_OAuth_1702454216196
                             repoName: ipreetgs/terragrunt-live-repo
                             branch: main
-                            folderPath: /
+                            folderPath: .
                       moduleConfig:
                         terragruntRunType: RunAll
                         path: /
