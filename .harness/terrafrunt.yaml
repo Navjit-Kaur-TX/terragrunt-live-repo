@@ -36,3 +36,6 @@ pipeline:
                     provisionerIdentifier: a1a
                   timeout: 10m
         tags: {}
+        delegateSelectors:
+          - docker-delegate2-terraform-terragrunt
+          - delegate-2-terraform
