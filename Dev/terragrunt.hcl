@@ -2,8 +2,11 @@ remote_state {
   backend = "s3"
   config = {
     bucket = "aws-tf-state-bucket-tx"
-    key    = "demotxstatefile.tfstate"
+    key    = "remotedemo.tfstate"
     region = "us-east-1"
+  }
+  generate = {
+    if_exists = "overwrite"
   }
 }
 
