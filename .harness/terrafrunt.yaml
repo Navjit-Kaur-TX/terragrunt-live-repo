@@ -1,0 +1,38 @@
+pipeline:
+  name: terrafrunt
+  identifier: terrafrunt
+  projectIdentifier: DemoTx
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: plan
+        identifier: plan
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: TerragruntPlan
+                  name: TerragruntPlan_1
+                  identifier: TerragruntPlan_1
+                  spec:
+                    configuration:
+                      command: Apply
+                      configFiles:
+                        store:
+                          type: Github
+                          spec:
+                            gitFetchType: Branch
+                            connectorRef: account.Github_OAuth_1702454216196
+                            repoName: terragrunt-live-repo
+                            branch: main
+                            folderPath: /
+                      moduleConfig:
+                        terragruntRunType: RunAll
+                        path: vm-module
+                      secretManagerRef: harnessSecretManager
+                    provisionerIdentifier: a1a
+                  timeout: 10m
+        tags: {}
