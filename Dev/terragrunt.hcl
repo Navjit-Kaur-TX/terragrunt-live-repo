@@ -1,7 +1,7 @@
 remote_state {
   backend = "s3"
   config = {
-    bucket = "demotxstatefile"
+    bucket = "aws-tf-state-bucket-tx"
     key    = "demotxstatefile.tfstate"
     region = "us-east-1"
   }
