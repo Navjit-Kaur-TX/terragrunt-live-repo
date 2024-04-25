@@ -31,7 +31,7 @@ pipeline:
                             folderPath: /
                       moduleConfig:
                         terragruntRunType: RunAll
-                        path: vm-module
+                        path: /
                       secretManagerRef: harnessSecretManager
                     provisionerIdentifier: a1a
                     delegateSelectors:
