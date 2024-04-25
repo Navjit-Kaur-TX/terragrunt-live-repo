@@ -34,6 +34,9 @@ pipeline:
                         path: vm-module
                       secretManagerRef: harnessSecretManager
                     provisionerIdentifier: a1a
+                    delegateSelectors:
+                      - delegate-2-terraform
+                      - docker-delegate2-terraform-terragrunt
                   timeout: 10m
         tags: {}
         delegateSelectors:
